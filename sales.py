@@ -25,6 +25,6 @@ The function will also update the inventory_records (For restocking) for a  give
 
     if current_day % 7 != 0:
         available_items -= sales
-        inventory_records.append(current_day, sales, 0, available_items)
+        inventory_records.append([current_day, sales, 0, available_items])
 
     return available_items
