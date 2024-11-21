@@ -22,7 +22,6 @@ The function will also update the inventory_records (For restocking) for a  give
 
     sales = random.randint(1, 200) # put this externally of the if statement so it can be changed
                                          # easily if not being as a simulation, although it may slow down program sim.
-
     if current_day % 7 != 0:
         available_items -= sales
         inventory_records.append([current_day, sales, 0, available_items])
