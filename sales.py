@@ -19,5 +19,10 @@ available_items:(integer) This function returns this integer which updates the a
 The function will also update the inventory_records (For restocking) for a  given current day. 
 
     '''
+
+    if current_day % 7 != 0:
+        sales
+
+
     
     return available_items
