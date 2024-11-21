@@ -18,9 +18,14 @@ available_items:(integer) This function returns this integer which updates the a
 The function will also update the inventory_records (For restocking) for a  given current day. It will also return "available_items".
     '''
 
+    max_inventory = 2000
+
     if current_day == 0:
-        inventory_records.append(current_day, 0, 2000, 2000)
+        inventory_records.append(current_day, 0, max_inventory, max_inventory)
 
-
+    if current_day % 7 == 0:
+        need_to_restock = max_inventory - available_items
+        available_items += need_to_restock
+        inventory_records.append(current_day, 0, need_to_restock, available_items)
 
     return available_items
